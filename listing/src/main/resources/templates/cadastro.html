@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Cadastro</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+	>
+</head>
+<body>
+	<h1 class="title">Formulário de Cadastro</h1>
+
+	<form method="post" th:action="@{/cadastro}" th:object="${aluno}">
+		<div class="field">
+			<label for="nome" class="label">Nome:</label>
+			<input type="text" id="nome" th:field="*{nome}">
+		</div>
+		<div class="field">
+			<label for="matricula" class="label">Matrícula:</label>
+			<input type="text" id="matricula" th:field="*{matricula}">
+		</div>
+		<div class="field">
+			<label for="curso" class="label">Curso:</label>
+			<input type="text" id="curso" th:field="*{curso}">
+		</div>
+		<div>
+			<button type="submit" class="button is-text">Cadastro</button>
+		</div>
+	</form>
+</body>
+</html>

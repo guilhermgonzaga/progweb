@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Lista</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+	>
+</head>
+<body>
+	<h1 class="title">Lista de Alunos</h1>
+
+	<table class="table">
+		<tr>
+			<th>Nome</th>
+			<th>Matrícula</th>
+			<th>Curso</th>
+		</tr>
+		<tr th:each="aluno : ${alunos}">
+			<td th:text="${aluno.nome}"></td>
+			<td th:text="${aluno.matricula}"></td>
+			<td th:text="${aluno.curso}"></td>
+		</tr>
+	</table>
+
+	<a href="/cadastro" class="button is-text">Cadastrar Aluno</a>
+</body>
+</html>
